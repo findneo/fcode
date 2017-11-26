@@ -1,7 +1,7 @@
 # fcode - encode and decode in one place in real time
 
 ## Overview
-inspired by [an on-line tool](http://tool.ph0en1x.com/hashtool/tools.html#conv/)
+Inspired by [an on-line tool](http://tool.ph0en1x.com/hashtool/tools.html#conv/).
 
 A simple Python tool to make real-time conversions among different encoded forms.
 

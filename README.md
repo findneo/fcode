@@ -1,11 +1,17 @@
-# fcode
+# fcode - encode and decode in one place in real time
 
-## 概述：
-这个小工具能够实时互转ASCII，BASE64，BASE32，HEX(BASE16)，DEC，OCT，INT，URL ENCODE，HTML ENCODE，MORSE，ROT，栅栏密码等，灵感来自于一个[在线编解码工具](http://tool.ph0en1x.com/hashtool/tools.html#conv/) 。
+## Overview
+inspired by [an on-line tool](http://tool.ph0en1x.com/hashtool/tools.html#conv/)
 
-工具主要使用Tkinter编写，可在Windows/Linux上运行，UI跟随系统。
+A simple Python tool to make real-time conversions among different encoded forms.
 
-## 使用：
+ASCII,BASE64,BASE32,HEX(BASE16),DEC,OCT,INT,URL ENCODE,HTML ENCODE,Morse code,
+
+Rotation Encryption(include Caesar cipher),The Rail-Fence Cipher,etc. are currently supported.
+
+GUI is written mainly by Tkinter,thus it is follows system.
+
+## Usage
 ```python 
 python fcode.py
 ```
@@ -14,15 +20,16 @@ python fcode.py
     <img src="https://github.com/findneo/fcode/blob/master/demo_linux.gif" width="400" height="400">
     <img src="https://github.com/findneo/fcode/blob/master/demo.gif" width="400" height="400">
 
+## Shortcut
 
-## 快捷键
-* ESC 退出
-* TAB 切换
-* SHIFT+TAB 切换
-* ENTER 全选
-* CTRL+X/C/V  剪切/复制/粘贴
+| Press         | To                                    |
+|:------        |   :------                             |
+| CTRL+C/X/V    | Copy/Cut/Paste.                       |
+| TAB/SHIFT+TAB |Move forward/backward through fileds.  |
+| ENTER         |Select all.                            |
+| ESC           |Quit.                                  | 
 
-## 依赖：
+## Requirements：
 Python2
   * Tkinter
   * base64

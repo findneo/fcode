@@ -1,26 +1,19 @@
 # fcode - encode and decode in one place in real time
+A simple Python tool to make real-time conversions among different encoded forms. ASCII, BASE64, BASE32, HEX(BASE16), DEC, OCT, INT, URL ENCODE, HTML ENCODE, Morse code, Rotation Encryption(include Caesar cipher), The Rail-Fence Cipher, etc. are currently supported.
 
-## Overview
-Inspired by [an on-line tool](http://tool.ph0en1x.com/hashtool/tools.html#conv/).
+Inspired by [Ph0en1x kt.pe tools mirror](http://tool.ph0en1x.com/hashtool/tools.html#conv/).
 
-A simple Python tool to make real-time conversions among different encoded forms.
-
-ASCII,BASE64,BASE32,HEX(BASE16),DEC,OCT,INT,URL ENCODE,HTML ENCODE,Morse code,
-
-Rotation Encryption(include Caesar cipher),The Rail-Fence Cipher,etc. are currently supported.
-
-GUI is written mainly by Tkinter , thus what it looks like varies with system.
-
-## Usage
+# Usage
 ```python 
 python fcode.py
+# GUI is written mainly by Tkinter , thus what it looks like varies with system.
 ```
 
 
     <img src="https://github.com/findneo/fcode/blob/master/demo_linux.gif" width="400" height="400">
     <img src="https://github.com/findneo/fcode/blob/master/demo.gif" width="400" height="400">
 
-## Shortcut
+# Shortcut
 
 | Press         | To                                    |
 |:------        |   :------                             |
@@ -29,7 +22,7 @@ python fcode.py
 | ENTER         |Select all.                            |
 | ESC           |Quit.                                  | 
 
-## Requirements：
+# Requirements：
 Python2
   * Tkinter
   * base64

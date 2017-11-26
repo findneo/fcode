@@ -1,13 +1,15 @@
 # fcode
 
 ## 概述：
-  这个小工具使用Tkinter编写，能够实时互转ASCII，BASE64，BASE32，HEX(BASE16)，DEC，OCT，INT，URL ENCODE，HTML ENCODE，MORSE，ROT，栅栏密码等，灵感来自于一个[在线编解码工具](http://tool.ph0en1x.com/hashtool/tools.html#conv/) 。
+这个小工具能够实时互转ASCII，BASE64，BASE32，HEX(BASE16)，DEC，OCT，INT，URL ENCODE，HTML ENCODE，MORSE，ROT，栅栏密码等，灵感来自于一个[在线编解码工具](http://tool.ph0en1x.com/hashtool/tools.html#conv/) 。
+
+工具主要使用Tkinter编写，可在Windows/Linux上运行，UI跟随系统。
 
 ## 使用：
 ```python 
 python fcode.py
 ```
-![demo.gif](https://github.com/findneo/fcode/blob/master/demo.gif)
+![demo.gif](https://github.com/findneo/fcode/blob/master/demo.gif) ![demo_linux.gif](https://github.com/findneo/fcode/blob/master/demo_linux.gif)
 
 
 ## 快捷键

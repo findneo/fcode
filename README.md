@@ -10,10 +10,10 @@
 python fcode.py
 ```
 
-<center class="half">
-    <img src="https://github.com/findneo/fcode/blob/master/demo_linux.gif" width="400">
-    <img src="https://github.com/findneo/fcode/blob/master/demo.gif" width="400">
-</center>
+
+    <img src="https://github.com/findneo/fcode/blob/master/demo_linux.gif" width="400" height="400">
+    <img src="https://github.com/findneo/fcode/blob/master/demo.gif" width="400" height="400">
+
 
 ## 快捷键
 * ESC 退出

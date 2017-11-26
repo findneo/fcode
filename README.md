@@ -9,7 +9,7 @@ ASCII,BASE64,BASE32,HEX(BASE16),DEC,OCT,INT,URL ENCODE,HTML ENCODE,Morse code,
 
 Rotation Encryption(include Caesar cipher),The Rail-Fence Cipher,etc. are currently supported.
 
-GUI is written mainly by Tkinter,thus it is follows system.
+GUI is written mainly by Tkinter , thus what it looks like varies with system.
 
 ## Usage
 ```python 

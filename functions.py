@@ -5,18 +5,40 @@ import re
 import hashlib
 
 en_ascii = de_ascii = (lambda x: x)
-en_base64 = lambda s: base64.b64encode(s)
-en_base32 = lambda s: base64.b32encode(s)
-de_base64 = lambda s: base64.b64decode(s)
-de_base32 = lambda s: base64.b32decode(s, casefold=True)
+
+
+def en_base64(s): return base64.b64encode(s)
+
+
+def en_base32(s): return base64.b32encode(s)
+
+
+def de_base64(s): return base64.b64decode(s)
+
+
+def de_base32(s): return base64.b32decode(s, casefold=True)
+
+
 en_lower = de_upper = de_lower = lambda s: s.lower()
-en_upper = lambda s: s.upper()
+
+
+def en_upper(s): return s.upper()
+
+
 en_rev = de_rev = lambda s: s[::-1]
-en_md5 = lambda s: hashlib.md5(s).hexdigest() if s != '' else ""
+
+
+def en_md5(s): return hashlib.md5(s).hexdigest() if s != '' else ""
+
+
 de_md5 = de_rot = de_zhalan = lambda s: ""
 en_morse = de_morse = lambda s: morse(s) if s != '' else ""
-en_rot = lambda s: caesar(s) if s != '' else ""
-en_zhalan = lambda s: rail_fence(s) if s != '' else ""
+
+
+def en_rot(s): return caesar(s) if s != '' else ""
+
+
+def en_zhalan(s): return rail_fence(s) if s != '' else ""
 
 
 def rail_fence(s):
@@ -122,30 +144,33 @@ def en_html(s):
 
 
 def de_html(s):
+    if s[0:3] == '+++':
+        return ''.join([chr(int(i)) for i in s.strip('&#+;').split(';&#')])
     s = s.replace('&amp;', '&').replace('&lt;', '<').replace(
         '&gt;', '>').replace('&quot;', '"').replace('&apos;', "'")
+
     return s.replace('&amp', '&').replace('&lt', '<').replace(
         '&gt', '>').replace('&quot', '"').replace('&apos', "'")
 
 
 def morse(s):
-    morseChart = ['.-',       '-...',     '-.-.',     '-..',      '.',        '..-.',     '--.',
-                  '....',     '..',       '.---',     '-.-',      '.-..',     '--',       '-.',
-                  '---',      '.--.',     '--.-',     '.-.',      '...',      '-',        '..-',
-                  '...-',     '.--',      '-..-',     '-.--',     '--..',     '-----',    '.----',
-                  '..---',    '...--',    '....-',    '.....',    '-....',    '--...',    '---..',
-                  '----.',    '.-.-.-',   '--..--',   '..--..',   '-....-',   '.----.',   '---...',
-                  '.-..-.',   '-..-.',    '.--.-.',   '-.-.-.',   '-...-',    '-.-.--',   '..--.-',
-                  '-.--.',    '-.--.-',   '...-..-',  '.-...',    '.-.-.',    ' ',        '*'
+    morseChart = ['.-', '-...', '-.-.', '-..', '.', '..-.', '--.',
+                  '....', '..', '.---', '-.-', '.-..', '--', '-.',
+                  '---', '.--.', '--.-', '.-.', '...', '-', '..-',
+                  '...-', '.--', '-..-', '-.--', '--..', '-----', '.----',
+                  '..---', '...--', '....-', '.....', '-....', '--...', '---..',
+                  '----.', '.-.-.-', '--..--', '..--..', '-....-', '.----.', '---...',
+                  '.-..-.', '-..-.', '.--.-.', '-.-.-.', '-...-', '-.-.--', '..--.-',
+                  '-.--.', '-.--.-', '...-..-', '.-...', '.-.-.', ' ', '*'
                   ]
-    alphaChart = ['a',        'b',        'c',        'd',        'e',        'f',        'g',
-                  'h',        'i',        'j',        'k',        'l',        'm',        'n',
-                  'o',        'p',        'q',        'r',        's',        't',        'u',
-                  'v',        'w',        'x',        'y',        'z',        '0',        '1',
-                  '2',        '3',        '4',        '5',        '6',        '7',        '8',
-                  '9',        '.',        ',',        '?',        '-',        "'",        ':',
-                  '"',        '/',        '@',        ';',        '=',        '!',        '_',
-                  '(',        ')',        '$',        '&',        '+',        ' ',        '#'
+    alphaChart = ['a', 'b', 'c', 'd', 'e', 'f', 'g',
+                  'h', 'i', 'j', 'k', 'l', 'm', 'n',
+                  'o', 'p', 'q', 'r', 's', 't', 'u',
+                  'v', 'w', 'x', 'y', 'z', '0', '1',
+                  '2', '3', '4', '5', '6', '7', '8',
+                  '9', '.', ',', '?', '-', "'", ':',
+                  '"', '/', '@', ';', '=', '!', '_',
+                  '(', ')', '$', '&', '+', ' ', '#'
                   ]
 
     # or as a dict ->  {c[1][i]: c[0][i] for i in xrange(len(c[0]))}

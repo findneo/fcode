@@ -6,7 +6,8 @@ Inspired by [Ph0en1x kt.pe tools mirror](http://tool.ph0en1x.com/hashtool/tools.
 # Usage
 ```python 
 python fcode.py
-# GUI is written mainly by Tkinter , thus what it looks like varies with system.
+# GUI is written mainly by Tkinter , 
+# thus what it looks like varies with system.
 ```
 ![demo_linux.gif](https://i.loli.net/2018/03/01/5a981de5a272d.gif)
 ![demo.gif](https://i.loli.net/2018/03/01/5a981de5a3b05.gif)

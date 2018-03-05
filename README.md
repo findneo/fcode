@@ -1,7 +1,7 @@
 # fcode - encode and decode in one place in real time
 A simple Python tool to make real-time conversions among different encoded forms. ASCII, BASE64, BASE32, HEX(BASE16), DEC, OCT, INT, URL ENCODE, HTML ENCODE, Morse code, Rotation Encryption(include Caesar cipher), The Rail-Fence Cipher, etc. are currently supported.
 
-Inspired by [Ph0en1x kt.pe tools mirror](http://tool.ph0en1x.com/hashtool/tools.html#conv/).
+Inspired by [Tamás Koczka's work](https://koczkatamas.github.io).
 
 # Usage
 ```python 

@@ -1,4 +1,7 @@
 # fcode - encode and decode in one place in real time
+
+一个即时编解码工具，目前支持ASCII, BASE64, BASE32, HEX(BASE16), DEC, OCT, INT, URL ENCODE, HTML ENCODE, Morse code, Rotation Encryption(include Caesar cipher), The Rail-Fence Cipher,等。
+
 A simple Python tool to make real-time conversions among different encoded forms. ASCII, BASE64, BASE32, HEX(BASE16), DEC, OCT, INT, URL ENCODE, HTML ENCODE, Morse code, Rotation Encryption(include Caesar cipher), The Rail-Fence Cipher, etc. are currently supported.
 
 Inspired by [Tamás Koczka's work](https://koczkatamas.github.io).

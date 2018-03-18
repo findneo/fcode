@@ -128,7 +128,10 @@ def de_int(s):
 def en_url(s):
     todo = ["!", "#", "$", "&", "'",
             "(", ")", "*", "+", ",", "/", ":", ";", "=", "?", "@", "[", "]", " "]
-    return ''.join([i if i not in todo else "%" + hex(ord(i))[2:] for i in s])
+    if not s.startswith("all:"):
+        return ''.join([i if i not in todo else "%" + hex(ord(i))[2:].zfill(2) for i in s])
+    else:
+        return ''.join(["%" + hex(ord(i))[2:].zfill(2) for i in s[4:]])
 
 
 def de_url(s):
